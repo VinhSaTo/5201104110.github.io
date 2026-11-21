@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    width: 40%;
+    height: 100%;
+    background-color: rgb(87, 87, 245);
+    flex-direction: column; 
+}
+.profile-pic{
+    width: 40%;
+    justify-self: center;
+}
+.right h1 {
+    margin: 0;
+    font-size: 45px;
+    font-weight: bold;
+}
+.right h2 {
+    margin: 0;
+    font-size: 30px;
+}
+.right {
+width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+.line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.line > * {
+    margin: 0;
+    flex-shrink: 0; /* Giữ nguyên chữ, không bị co bóp khi đường kẻ xuất hiện */
+}
+
+.line::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: currentColor;
+}
+p{
+    font-size: 18px;
+}
+.percent-slider {
+    --val: 50;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(
+        to right,
+        black 0%,
+        black calc(var(--val) * 1%),
+        white calc(var(--val) * 1%),
+        white 100%
+    );
+}
+
+.percent-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.percent-slider::-moz-range-progress {
+    background-color: white;
+    height: 10px;
+    border-radius: 5px;
+}
+.percent-slider:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.percent-slider:disabled::-webkit-slider-thumb {
+    cursor: default;
+}
+
+.percent-slider:disabled::-moz-range-thumb {
+    cursor: default;
+}
+
