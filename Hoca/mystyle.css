@@ -1,0 +1,177 @@
+
+body{
+margin: 0;
+    overflow: hidden;
+    background-image: url("images/hoca.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+#bg-toggle:checked ~ #content {
+    margin: 0;
+    overflow: hidden;
+    background-image: url("images/hoca3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+}
+.btn-bg {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 9999;
+    padding: 10px 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+#content{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+#shark{
+    left:100px;top:400px;
+    position: absolute;
+    animation: shark;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes shark{
+    0% {left: 100px;top: 400px;}
+    20%{left: 300px;top: 400px;}
+    40%{left: 500px;top: 300px;}
+    50%{left: 600px;top: 50px;}
+    60%{left: 600px;top: 100px;}
+    80%{left: 600px;top: 200px;}
+    100%{left: 100px;top: 400px;transform: scaleX(-1);}
+}#diver1{
+    right:100px;top:400px;
+    position: absolute;
+    animation: diver1;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes diver1{
+    0% { left: 100px; top: 400px; } 
+    20% { left: 300px; top: 400px; } 
+    40% { left: 500px; top: 300px; } 
+    50% { left: 600px; top: 50px; } 
+    60% { left: 600px; top: 100px; } 
+    80% { left: 600px; top: 200px; } 
+    100% { left: 100px; top: 400px; transform: scaleX(-1);}
+    }
+#diver2{
+    left:100px;top:400px;
+    position: absolute;
+    animation: diver2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes diver2{
+0% { left: 10%; top: 75%; transform: scaleX(1); } 
+20% { left: 38%; top: 20%; transform: scaleX(1); } 
+45% { left: 78%; top: 65%; transform: scaleX(-1); } 
+70% { left: 32%; top: 28%; transform: scaleX(-1); } 
+100% { left: 10%; top: 75%; transform: scaleX(1);}
+}
+#diver3{
+    left:100px;top:400px;
+    position: absolute;
+    animation: diver3;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes diver3{
+0% { left: 18%; top: 35%; transform: scaleX(1); } 
+30% { left: 72%; top: 22%; transform: scaleX(-1); } 
+60% { left: 60%; top: 74%; transform: scaleX(-1); } 
+85% { left: 15%; top: 62%; transform: scaleX(1); } 
+100% { left: 18%; top: 35%; transform: scaleX(1);}
+}
+#faintSchool img{
+display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: faintSchool 8s linear infinite;
+}
+#faintSchool{
+position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+@keyframes faintSchool{
+0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.85;
+    }
+    85% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+#goldFishSchool{
+    left:100px;top:400px;
+    position: absolute;
+    animation: goldFishSchool;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes goldFishSchool{
+0% { left: 720px; top: 200px; transform: scaleX(-1); } 
+14% { left: 520px; top: 110px; transform: scaleX(-1); } 
+28% { left: 280px; top: 210px; transform: scaleX(-1); } 
+42% { left: 110px; top: 360px; transform: scaleX(1); } 
+57% { right: 320px; top: 490px; transform: scaleX(1); } 
+72% { left: 620px; top: 530px; transform: scaleX(1); } 
+86% { left: 760px; top: 360px; transform: scaleX(-1); } 
+100% { right: 720px; top: 200px; transform: scaleX(-1); }
+}
+#turtle{
+    left:100px;top:400px;
+    position: absolute;
+    animation: turtle;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes turtle{
+0% { left: 90px; top: 320px; } 
+12% { right: 260px; top: 160px; } 
+24% { left: 490px; top: 240px; } 
+36% { left: 740px; top: 120px; transform: scaleX(-1); } 
+48% { left: 580px; top: 380px; transform: scaleX(-1); } 
+62% { right: 340px; top: 520px; transform: scaleX(-1); } 
+76% { left: 160px; top: 440px; transform: scaleX(1); } 
+88% { left: 420px; top: 340px; transform: scaleX(1); } 
+100% { left: 90px; top: 320px; transform: scaleX(1); }
+}
